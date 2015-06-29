@@ -1,5 +1,16 @@
 module History
 
+  class AliasStringBuilder
+
+    def build_alias_string(unique_hashes, aliaser, hasher)
+      alias_hash = hasher.build_alias_hash_array(unique_hashes, aliaser)
+      aliases = alias_hash.map { |uh| "#{aliaser.sample_string(uh[:command], 
+                       uh[:alias])}"}
+      aliases.join("\n")
+    end
+
+  end
+
   class HashBuilder
 
     def build_alias_hash_array(unique_hashes, aliaser)
@@ -15,6 +26,10 @@ module History
   end
 
   class Aliaser
+
+    def sample_string(command, example_alias)
+      "alias #{example_alias}='#{command}'"
+    end
 
     def generate(string)
       rejected_regex = /[[:blank:]]|[[:digit:]]|[[:punct:]]/

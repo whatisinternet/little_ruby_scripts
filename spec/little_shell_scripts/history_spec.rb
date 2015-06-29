@@ -6,6 +6,26 @@ describe History do
     @file_name = "#{Dir.pwd}/spec/fixtures/.zhistory"
   end
 
+  describe History::AliasStringBuilder do
+
+    before do
+      parser = History::Parser.new
+      history = parser.read_file_to_array(@file_name)
+      @unique_hashes = parser.unique_lines_to_array_of_hashes(history)
+      @alias = History::Aliaser.new
+      @hasher = History::HashBuilder.new
+      @stringer = History::AliasStringBuilder.new
+    end
+
+    it 'should return a \n delimited string of aliases' do
+      sample_alias_string = ["alias lsl='ls -al'", 
+                             "alias fngr='finger'", 
+                             "alias whm='whoami'"].join "\n"
+      actual_alias_string = @stringer.build_alias_string(@unique_hashes, @alias, @hasher)
+      expect(actual_alias_string).to eq(sample_alias_string)
+    end
+
+  end
   describe History::HashBuilder do
 
     before do
@@ -23,6 +43,7 @@ describe History do
       actual_hash_array = @hasher.build_alias_hash_array(@unique_hashes, @alias)
       expect(actual_hash_array).to eq(sample_hash_array)
     end
+
   end
 
   describe History::Aliaser do
@@ -33,6 +54,13 @@ describe History do
 
     before do
       @alias = History::Aliaser.new
+    end
+
+    it 'should return a alias string for a term and its\' alias' do
+      alias_example = @alias.generate(@example_command)
+      example_alias = @alias.sample_string(@example_command, alias_example)
+      sample_string = "alias lsl='ls -al; 9'"
+      expect(example_alias).to eq(sample_string)
     end
 
     it 'should return an alias for a term' do
