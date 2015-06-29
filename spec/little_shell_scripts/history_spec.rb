@@ -18,9 +18,9 @@ describe History do
     end
 
     it 'should return a \n delimited string of aliases' do
-      sample_alias_string = ["alias lsl='ls -al'", 
-                             "alias fngr='finger'", 
-                             "alias whm='whoami'"].join "\n"
+      sample_alias_string = ["#alias lsl='ls -al'", 
+                             "#alias fngr='finger'", 
+                             "#alias whm='whoami'"].join "\n"
       actual_alias_string = @stringer.build_alias_string(@unique_hashes, @alias, @hasher)
       expect(actual_alias_string).to eq(sample_alias_string)
     end

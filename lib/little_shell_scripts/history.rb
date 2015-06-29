@@ -5,7 +5,7 @@ module History
     def build_alias_string(unique_hashes, aliaser, hasher)
       alias_hash = hasher.build_alias_hash_array(unique_hashes, aliaser)
       alias_hash.map do |uh| 
-        "#{aliaser.sample_string(uh[:command], uh[:alias])}"
+        "##{aliaser.sample_string(uh[:command], uh[:alias])}"
       end.join("\n")
     end
 
