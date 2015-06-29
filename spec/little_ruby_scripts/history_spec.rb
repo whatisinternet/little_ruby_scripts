@@ -6,6 +6,31 @@ describe History do
     @file_name = "#{Dir.pwd}/spec/fixtures/.zhistory"
   end
 
+  describe History::CommandSearcher do
+
+    before do
+      parser = History::Parser.new
+      history = parser.read_file_to_array(@file_name)
+      @unique_hashes = parser.unique_lines_to_array_of_hashes(history)
+      @alias = History::Aliaser.new
+      @hasher = History::HashBuilder.new
+      @searcher = History::CommandSearcher.new
+    end
+
+    it 'should return a similar command' do
+      suggested_string = @searcher.suggest('whoam',
+                                   @unique_hashes,
+                                   @alias,
+                                   @hasher)
+
+      expect(suggested_string).to eq('whoami')
+    end
+
+    it 'should grab the last string in the history' do
+      expect(@searcher.last_from_history(@file_name)).to eq('whoami')
+    end
+
+  end
   describe History::AliasStringBuilder do
 
     before do

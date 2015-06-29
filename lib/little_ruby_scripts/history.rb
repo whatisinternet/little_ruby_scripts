@@ -1,5 +1,19 @@
 module History
 
+  class CommandSearcher
+
+    def suggest(search_term, unique_hashes, aliaser, hasher)
+      alias_hash = hasher.build_alias_hash_array(unique_hashes, aliaser)
+      alias_hash.reject!{|ah| ah[:command].delete(search_term).length >= (search_term.length / 2) }
+      alias_hash.first[:command]
+    end
+
+    def last_from_history(history_file = "#{ENV['HOME']}/.zhistory")
+      File.readlines(history_file).last.chomp
+    end
+
+  end
+
   class AliasStringBuilder
 
     def build_alias_string(unique_hashes, aliaser, hasher)
