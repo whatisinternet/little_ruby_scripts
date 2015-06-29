@@ -23,7 +23,7 @@ This library provides two functions.
   alias suggestions
 - **gen_history** will search though a .zhistory hifle and return a hash of the
   following format
-    ```ruby
+    ```
       {
        command: 'command_name', 
        alias: 'suggested_alias', 
