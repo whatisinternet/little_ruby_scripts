@@ -1,8 +1,9 @@
 # LittleRubyScripts
 
-**This is still a work in progress**
+This is a collection of scripts and command line utilities for working in a
+command line and ruby environment.
 
-TODO: Delete this and the text above, and describe your gem
+Please feel free to add a feature and issue a pull request.
 
 ## Installation
 Install it yourself as:
@@ -11,7 +12,25 @@ Install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+### History tools:
+
+This library provides two functions. 
+
+    gen_aliases
+    gen_history
+
+- **gen_aliases** will search through a .zhistory file and return a string of
+  alias suggestions
+- **gen_history** will search though a .zhistory hifle and return a hash of the
+  following format
+    ```ruby
+      {
+       command: 'command_name', 
+       alias: 'suggested_alias', 
+       count:'number_of_times_in_history'
+      }
+    ```
+
 
 ## Development
 
