@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'little_shell_scripts/version'
+require 'little_ruby_scripts/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "little_shell_scripts"
-  spec.version       = LittleShellScripts::VERSION
+  spec.name          = "little_ruby_scripts"
+  spec.version       = LittleRubyScripts::VERSION
   spec.authors       = "Whatisinternet"
   spec.email         = "joshteeter@gmail.com"
 
