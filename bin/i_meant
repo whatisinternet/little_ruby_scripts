@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require "little_shell_scripts/history"
+require "little_ruby_scripts/history"
 
 def main
 

@@ -14,22 +14,22 @@ Install it yourself as:
 
 ### History tools:
 
-This library provides two functions. 
+This library provides three functions. 
 
     gen_aliases
     gen_history
+    i_meant
 
 - **gen_aliases** will search through a .zhistory file and return a string of
   alias suggestions
 - **gen_history** will search though a .zhistory hifle and return a hash of the
   following format
     ```
-      {
-       command: 'command_name', 
+      {command: 'command_name', 
        alias: 'suggested_alias', 
-       count:'number_of_times_in_history'
-      }
+       count:'number_of_times_in_history'}
     ```
+- **i_meant** will search through .zhistory for the last used 'command' and return what you probably meant
 
 ## Contributing
 
