@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.org/whatisinternet/little_ruby_scripts.svg?branch=master)](https://travis-ci.org/whatisinternet/little_ruby_scripts)
+[![Gem Version](https://badge.fury.io/rb/little_ruby_scripts.svg)](http://badge.fury.io/rb/little_ruby_scripts)
+[![Code Climate](https://codeclimate.com/github/whatisinternet/little_ruby_scripts/badges/gpa.svg)](https://codeclimate.com/github/whatisinternet/little_ruby_scripts)
+![Test Coverage](https://codeclimate.com/github/whatisinternet/little_ruby_scripts/badges/coverage.svg)](https://codeclimate.com/github/whatisinternet/little_ruby_scripts)
 # LittleRubyScripts
 
 This is a collection of scripts and command line utilities for working in a
@@ -16,20 +20,20 @@ Install it yourself as:
 
 This library provides three functions. 
 
-    gen_aliases
-    gen_history
-    i_meant
+    galiases
+    ghistory
+    imeant
 
-- **gen_aliases** will search through a .zhistory file and return a string of
+- **galiases** will search through a .zhistory file and return a string of
   alias suggestions
-- **gen_history** will search though a .zhistory hifle and return a hash of the
+- **ghistory** will search though a .zhistory hifle and return a hash of the
   following format
     ```
       {command: 'command_name', 
        alias: 'suggested_alias', 
        count:'number_of_times_in_history'}
     ```
-- **i_meant** will search through .zhistory for the last used 'command' and return what you probably meant
+- **imeant** will search through .zhistory for the last used 'command' and return what you probably meant
 
 ## Contributing
 
