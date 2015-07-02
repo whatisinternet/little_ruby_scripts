@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = "Whatisinternet"
   spec.email         = "joshteeter@gmail.com"
 
-  spec.summary       = %q{A collection of useful ruby/shell scripts for rails developers}
-  spec.homepage      = %q{https://github.com/whatisinternet/little_shell_scripts}
+  spec.summary       = %q{A collection of useful ruby/shell scripts for rails developer}
+  spec.homepage      = %q{https://github.com/whatisinternet/little_ruby_scripts}
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

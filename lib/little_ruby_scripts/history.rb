@@ -5,7 +5,7 @@ module History
     def suggest(search_term, unique_hashes, aliaser, hasher)
       alias_hash = hasher.build_alias_hash_array(unique_hashes, aliaser)
       alias_hash.reject!{|ah| ah[:command].delete(search_term).length >= (search_term.length / 2) }
-      return 'No match' if alias_hash.first.nil?
+      return 'No match' if alias_hash.nil?
       alias_hash.first.fetch(:command, 'No match')
     end
 
