@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.org/whatisinternet/little_ruby_scripts.svg?branch=master)](https://travis-ci.org/whatisinternet/little_ruby_scripts)
 [![Gem Version](https://badge.fury.io/rb/little_ruby_scripts.svg)](http://badge.fury.io/rb/little_ruby_scripts)
 [![Code Climate](https://codeclimate.com/github/whatisinternet/little_ruby_scripts/badges/gpa.svg)](https://codeclimate.com/github/whatisinternet/little_ruby_scripts)
-![Test Coverage](https://codeclimate.com/github/whatisinternet/little_ruby_scripts/badges/coverage.svg)](https://codeclimate.com/github/whatisinternet/little_ruby_scripts)
+[![Test Coverage](https://codeclimate.com/github/whatisinternet/little_ruby_scripts/badges/coverage.svg)](https://codeclimate.com/github/whatisinternet/little_ruby_scripts)
 # LittleRubyScripts
 
 This is a collection of scripts and command line utilities for working in a
