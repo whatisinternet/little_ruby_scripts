@@ -4,3 +4,11 @@ rvm:
   - 2.2.2
   - 2.1.6
 script: bundle exec rspec
+deploy:
+  provider: rubygems
+  api_key:
+    secure: DDX0in/RU35B4ijmV0KjmVOGnzA4QWbrIIdKkxAoKuTan/4nLnaeazlS5b4MaWeVSLyMmX7XRfJPn0rRehnrYEFbTVME8vgNarbOV7hJmGMUXgN6JoPIfTQDaIjHxXM2gCfwnIOGqqQVFM/mbkz8xYTz2Mipi2YNtqaP6/1EoKo=
+  gem: little_ruby_scripts
+  on:
+    tags: true
+    repo: whatisinternet/little_ruby_scripts
