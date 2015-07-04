@@ -7,7 +7,9 @@
 This is a collection of scripts and command line utilities for working in a
 command line and ruby environment.
 
-Please feel free to add a feature and issue a pull request.
+
+This is a work in progress. More scripts may be added as needed. Please feel 
+free to add a feature and issue a pull request.
 
 ## Installation
 Install it yourself as:
@@ -37,7 +39,7 @@ This library provides three functions.
 
 ## Contributing
 
-1. Fork it ( https://github.com/[my-github-username]/little_ruby_scripts/fork )
+1. Fork it ( https://github.com/whatisinternet/little_ruby_scripts/fork )
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Commit your changes (`git commit -am 'Add some feature'`)
 4. Push to the branch (`git push origin my-new-feature`)
